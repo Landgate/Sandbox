@@ -26,5 +26,31 @@ For easier viewing of layers.json try the [JSONView](https://chrome.google.com/w
 
 > **Coming Soon:** Our brand new search and discovery tool! We'll intergrate all of this information and more in a single easy to use web interface.
 
-## Accessing The Sandbox
+## Accessing the Sandbox
 https://github.com/Landgate/slip-developer-documentation/wiki/Sandbox
+
+## Accessing Landgate Data
+How you access the Sandbox data will depend on the API endpoints that you are using.
+
+### The GME API & WFS
+Accessing data via the Google Maps Engine API or WFS is at the datasource-level and requires a datasource assetId to be provided.
+
+> **GME API:** https://www.googleapis.com/mapsengine/v1/tables/{assetId}/features?version=published&key={your-api-key}
+
+> **WFS:** https://clients6.google.com/mapsengine/wfs_experimental/wfs/{assetId}/?REQUEST=GetCapabilities&SERVICE=WFS2.0&assetVersion=published
+
+### Google Maps JavaScript API
+The Google Maps JavaScript API has two ways of accessing data in Google Maps Engine:
+
+1. Via the layerId (recommended), or
+2. By supplying a mapId and a layerKey.
+
+> **Sandbox mapID:** 09372590152434720789-00440247219122458144
+
+
+### WMS & WMTS
+WMS and WMTS access to the Sandbox only require the mapId.
+
+> **Sandbox mapID:** 09372590152434720789-00440247219122458144
+
+**[WMS Capabilities](https://mapsengine.google.com/09372590152434720789-00440247219122458144-4/wms/?REQUEST=GetCapabilities&VERSION=1.3.0)** | **[WMTS Capabilities](https://mapsengine.google.com/09372590152434720789-00913315481290556980-4/wmts/?REQUEST=GetCapabilities&VERSION=1.0&SERVICE=WMTS)**
